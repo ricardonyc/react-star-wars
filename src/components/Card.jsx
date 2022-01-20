@@ -1,10 +1,9 @@
-import React, { useState, useEffect } from 'react';
-
+import React from 'react';
 
 function Card(props) {
     return (
-        <div>
-            
+        <div className='name--box'>
+            <h1>{props.name}</h1>
         </div>
     );
 }

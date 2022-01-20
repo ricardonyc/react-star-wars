@@ -1,23 +1,31 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
+import Card from "./Card";
+// import CardInfo from "./CardInfo";
 
-function Starships(props) {
-  const url = `https://swapi.dev/api/starships/9/`;
-  const [starShip, setStarShip] = useState([]);
+function Starships() {
+  console.log("Component rendered");
 
+  const [starship, setStarship] = useState([]);
+
+  const url = `https://swapi.dev/api/starships/`;
 
   useEffect(() => {
     fetch(url)
-        .then(res => res.json())
-
+      .then((res) => res.json())
+      .then((data) => setStarship(data.results));
   }, []);
 
+  // console.log(starship);
 
   return (
-      <div>
-
-      </div>
-  )
+    <div className="container">
+      {
+        starship.map(item => (
+          <Card name={item.name} key={item.name} />
+        ))
+      }
+    </div>
+  );
 }
 
 export default Starships;

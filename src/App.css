@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+table {
+  padding: 1rem;
+}
+
+th,
+td {
+  border: 1px solid;
+  padding: 0.5rem;
+  border-radius: 1px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.name--box {
+  margin: 0.3rem;
+  background: #2f4f4f;
+  color: white;
+  border-radius: 5px;
+  width: 300px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  font-size: 0.7rem;
+  cursor: pointer;
+}
+
+.name--box h1 {
+  width: 100%;
+  text-align: center;
+  padding: 1rem;
+}
+
+nav {
+  width: 100%;
+  background: black;
+  color: white;
+  text-align: center;
+  padding: 0.7rem 0;
+  margin-bottom: 2rem;
+}
