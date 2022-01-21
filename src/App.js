@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import "./App.css";
 import Starships from "./components/Starships";
 import Header from "./components/Header";
-import Practice from "./components/Practice";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 function App() {
@@ -27,7 +26,6 @@ function App() {
       </div>
       <Routes>
         <Route path="/" element={<Starships info={starship} />} />
-        <Route path="/practice" element={<Practice />} />
       </Routes>
     </Router>
   );
